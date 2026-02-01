@@ -1,0 +1,40 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    /* Fixed height match */
+    padding: 0 40px;
+    font-size: 24px;
+    /* Explicit Requirement */
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: var(--color-bg);
+    /* Ensure background is opaque */
+    position: sticky;
+    /* Keep top */
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+}
+
+.header-left {
+    display: flex;
+    gap: 30px;
+}
+
+.header-right {
+    display: flex;
+    gap: 30px;
+    color: var(--color-status);
+    /* Green for healthy status connectivity */
+}
+
+.header-time {
+    color: var(--color-data);
+}
+
+.header-date {
+    color: var(--color-text-dim);
+}

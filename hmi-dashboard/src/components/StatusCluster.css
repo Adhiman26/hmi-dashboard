@@ -1,0 +1,41 @@
+.status-cluster-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 40px;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.status-block {
+    text-align: center;
+}
+
+.status-label {
+    font-size: 1rem;
+    color: var(--color-inactive);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.status-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-data);
+}
+
+.status-value.highlight {
+    color: var(--color-status);
+}
+
+.unit {
+    font-size: 1rem;
+    color: var(--color-text-dim);
+}
+
+.divider {
+    width: 1px;
+    height: 40px;
+    background-color: #444;
+}

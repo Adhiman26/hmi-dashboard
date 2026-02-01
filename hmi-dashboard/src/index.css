@@ -1,0 +1,80 @@
+:root {
+  /* Safety Color Palette */
+  --color-bg: #121212;
+  /* Deep Matte-Black */
+  --color-alert: #FF1744;
+  /* Critical Alerts (Solid Red) */
+  --color-warning: #FFC107;
+  /* Warnings (Amber Gold) */
+  --color-status: #00E676;
+  /* Status (Emerald Green) */
+  --color-data: #FFFFFF;
+  /* Data (Pure White) */
+  --color-inactive: #757575;
+  /* Inactive Segments (Dim Neutral Gray) */
+  --color-text-dim: #B0B0B0;
+  /* Secondary Text */
+
+  /* Layout Constraints */
+  --dashboard-width: 1440px;
+  --dashboard-height: 1024px;
+
+  /* Fonts */
+  --font-primary: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height: 1.5;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  /* Black outside dashboard area */
+  color: var(--color-data);
+  font-family: var(--font-primary);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-regular);
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: auto;
+  /* Allow scrolling if viewport is smaller than dashboard */
+}
+
+#root {
+  width: var(--dashboard-width);
+  height: var(--dashboard-height);
+  background-color: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+  /* Internal dashboard overflow stays hidden */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  /* Subtle depth */
+  border: 1px solid #333;
+  /* Slight border to define edge */
+  flex-shrink: 0;
+  /* Prevent dashboard from shrinking */
+}
+
+/* Typography Utilities */
+.text-alert {
+  color: var(--color-alert);
+}
+
+.text-warning {
+  color: var(--color-warning);
+}
+
+.text-status {
+  color: var(--color-status);
+}
+
+.text-dim {
+  color: var(--color-inactive);
+}
